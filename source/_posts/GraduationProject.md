@@ -7,7 +7,7 @@ date: 2016-05-03 01:01:01
 title: Chat——毕业设计项目简介
 
 categories:
-- 程序人生
+- 毕业设计
 
 ---
 
@@ -27,9 +27,9 @@ categories:
 
 2016.05.02更新：群组发送接收图片语音。今天还做了一点其他的东西。
 
-系统浏览器：[点击下载chat-0.0.8.apk](http://blog.renyuzhuo.cn/others/chat.apk)
+2016.05.03更新：新建群组，群组头像，名称修改，群组添加好友，退出群组。
 
-网盘下载：[下载地址：http://pan.baidu.com/s/1kUHZJ8r](http://pan.baidu.com/s/1kUHZJ8r)
+系统浏览器：[点击下载chat-0.0.9.apk](http://blog.renyuzhuo.cn/others/chat.apk)
 
 # 欢迎反馈
 
