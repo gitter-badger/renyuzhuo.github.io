@@ -277,7 +277,7 @@ $ ls # 查看目录，windows下为dir
 $ hexo server   # 启动服务器，可以在浏览器中查看，默认使用4000端口，直接输入hexo s也可以，
                 # 可以使用`hexo s -p 3000`也可以更改端口为3000
 </code></pre><p>部署，需要在github上创建<code>用户名.github.io</code>的项目，当然，如果不愿意这么叫而改为其他的名称需要一些配置，本文暂时不考虑：</p>
-<pre><code>hexo deploy
+<pre><code>$ hexo deploy
 </code></pre><p>部署网站，值得是将网站部署到github上，需要在_config.yml中进行配置，如下，这里支持同时部署到多个代码托管平台上，例如这里包含github和coding：</p>
 <pre><code>deploy:
 type: git
