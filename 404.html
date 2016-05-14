@@ -1,1 +1,13 @@
 <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8" homePageUrl="http://blog.renyuzhuo.cn" homePageName="回到我的主页"></script>
+
+<script type="text/javascript">
+    var t = 3;
+    function showTime(){  
+        t -= 1;
+        if(t==0){
+            location.href='http://blog.renyuzhuo.cn';  
+        }
+        setTimeout("showTime()",1000);  
+    }  
+    showTime();
+</script>
