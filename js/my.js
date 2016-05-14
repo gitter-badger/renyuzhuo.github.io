@@ -18,3 +18,11 @@ ga('send', 'pageview');
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(bp, s);
 })();
+
+/**
+ * 360蜘蛛
+ */
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?e8185a3fc0b863eb0f7bd12108258442":"https://jspassport.ssl.qhimg.com/11.0.1.js?e8185a3fc0b863eb0f7bd12108258442";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
