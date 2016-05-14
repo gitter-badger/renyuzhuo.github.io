@@ -329,18 +329,16 @@ repo:
 <h2 id="搜索引擎收录"><a href="#搜索引擎收录" class="headerlink" title="搜索引擎收录"></a>搜索引擎收录</h2><p>需要让搜索引擎收录网站内容，当然可以什么都不干，蜘蛛还是蛮厉害的。github网站被Google收录速度虽然不能用秒收形容吧，但是确实真的是太快了。也可以主动向搜索引擎提交，这样搜索引擎收录的更快。这里需要说一下的是，github屏蔽了Baidu，没错，就是github主动屏蔽了百度，百度的蜘蛛在爬到github时不能将结果正确返回，也从某一种意义上来说，百度很难主动收录github上博客。后面有解决办法。</p>
 <p>对于Google，进入网址<a href="https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="external">https://www.google.com/webmasters/tools/home?hl=zh-CN</a>，可以看到，这就是站长管理平台了。在这里，可以提交你的网站，需要验证你是网站所有者，提供了五种方法，建议HTML文件方法和HTML标记法比较好，一种是把文件上传，一种是把标记上传，根据具体提示即可成功，并且可以说明一点的是，其实几乎所有搜索引擎网站所有者权限都是这么验证的，国内搜索引擎使用域名提供商添加CNAME等方式也很好。当验证了权限后，更多好玩的就可以继续了，这里只说一个<code>抓取-&gt;站点地图</code>，在这里可以提交站点地图，帮助搜索引擎找到资源，对于个人博客来说，其实Google做的够好，如果网站不是什么奇葩网站，可以自己就分析出来，但是这个对国内搜索引擎来说就极其有用了，还是说一下。</p>
 <h3 id="站点地图"><a href="#站点地图" class="headerlink" title="站点地图"></a>站点地图</h3><p>Stop Trying to Reinvent the Wheel. 安装插件：</p>
-<pre><code>$ npm install --save hexo-generator-seo-friendly-sitemap # hexo站点地图生成插件，我个人觉得这个好用
+<pre><code>$ npm install --save hexo-generator-seo-friendly-sitemap # hexo站点地图生成插件
 </code></pre><p>在<code>_config.yml</code>中添加：</p>
 <pre><code>sitemap:
   path: sitemap.xml
 </code></pre><p>这样，在执行<code>hexo g</code>时会发现在public目录下生成了sitemap.xml和其他几个类似的文件，好了，打开看看就发现地图有了，<code>hexo d</code>部署。然后就可以了，将连接<code>http://blog.renyuzhuo.cn/sitemap.xml</code>提交给Google，或者是国内各种搜索引擎网站，这样收录速度就快多了。</p>
 <h2 id="流量统计"><a href="#流量统计" class="headerlink" title="流量统计"></a>流量统计</h2><p>依旧是添加JS代码，我真的不好意思继续这么说了，推荐三个网站。</p>
-<blockquote>
-<p>Google：<a href="https://analytics.google.com" target="_blank" rel="external">https://analytics.google.com</a></p>
-<p>CNZZ：<a href="http://wss.cnzz.com/main.php?c=user&amp;a=login" target="_blank" rel="external">http://wss.cnzz.com/main.php?c=user&amp;a=login</a></p>
-<p>腾讯分析：<a href="http://v2.ta.qq.com/" target="_blank" rel="external">http://v2.ta.qq.com/</a></p>
-</blockquote>
-<h2 id="百度不收录的问题"><a href="#百度不收录的问题" class="headerlink" title="百度不收录的问题"></a>百度不收录的问题</h2><p>分这么几步：</p>
+<pre><code>Google：https://analytics.google.com
+CNZZ：http://wss.cnzz.com/main.php?c=user&amp;a=login
+腾讯分析：http://v2.ta.qq.com/
+</code></pre><h2 id="百度不收录的问题"><a href="#百度不收录的问题" class="headerlink" title="百度不收录的问题"></a>百度不收录的问题</h2><p>分这么几步：</p>
 <pre><code>1. 注册百度站长平台
 2. 验证网站所有权
 3. 提交网站地图
