@@ -249,12 +249,12 @@
 <pre><code>git:
     windows: 直接安装包安装
     ubuntu: apt-get install git
-    其他linux: &lt;a href=&quot;https://git-scm.com/download/linux&quot;&gt;https://git-scm.com/download/linux&lt;/a&gt;
+    其他linux: https://git-scm.com/download/linux
 
 nodejs:
     windows: 安装包直接安装
     ubuntu: apt-get install nodejs
-    其他linux: &lt;a href=&quot;http://www.runoob.com/nodejs/nodejs-install-setup.html&quot;&gt;http://www.runoob.com/nodejs/nodejs-install-setup.html&lt;/a&gt;
+    其他linux: http://www.runoob.com/nodejs/nodejs-install-setup.html
 
 hexo:
     $ npm install -g hexo-cli # 这个可能有点慢，需要下载一些东西
@@ -270,11 +270,12 @@ $ ls # 查看目录，windows下为dir
     ├── source          # 用户资源文件
     |   ├── _drafts
     |   └── _posts      # 网站博客内容
-    └── themes          # 主题，可以使用很多主题，[传送门](https://hexo.io/themes/)
+    └── themes          # 主题，可以使用很多主题，https://hexo.io/themes/
 </code></pre><p>在<code>_config.yml</code>可以更改网站大部分配置，<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">参考</a>，但是我建议先不改，将网站跑起来看看效果，然后再回来改。</p>
 <p>命令，提示直接输入hexo可以看到支持哪些命令：</p>
 <pre><code>$ hexo generate # 生成静态文件，直接输入`hexo g`也可以
-$ hexo server   # 启动服务器，可以在浏览器中查看，默认使用4000端口，直接输入hexo s也可以，可以使用`hexo s -p 3000`也可以更改端口为3000
+$ hexo server   # 启动服务器，可以在浏览器中查看，默认使用4000端口，直接输入hexo s也可以，
+                # 可以使用`hexo s -p 3000`也可以更改端口为3000
 </code></pre><p>部署，需要在github上创建<code>用户名.github.io</code>的项目，当然，如果不愿意这么叫而改为其他的名称需要一些配置，本文暂时不考虑：</p>
 <pre><code>hexo deploy
 </code></pre><p>部署网站，值得是将网站部署到github上，需要在_config.yml中进行配置，如下，这里支持同时部署到多个代码托管平台上，例如这里包含github和coding：</p>
@@ -317,9 +318,11 @@ repo:
 </tbody>
 </table>
 <p>解释一下：</p>
-<pre><code>我在国内coding(下文有介绍)和国外github上分别进行了部署，在国内用户访问blog.renyuzhuo.cn时直接转发到coding服务器，国外访问blog.renyuzhuo.cn转发到github服务器，在直接使用renyuzhuo.cn时转发到coding上，这么配置应该可以达到这样的目的，但是测试国内访问大多数依旧转发给了github，原因不明。
-再说一下A记录，github并不是将所有博客地址都分配了一个IP地址，那太浪费了，而是通过访问同一个IP后由github根据访问的域名不同转发给到不同博客。CNAME是将一个域名指向另外一个域名达到访问效果相同的目的。
-</code></pre><p>这样配置还不够，需要在自己项目中添加CNAME文件，表示通过什么域名可以访问该博客。例如：</p>
+<blockquote>
+<p>我在国内coding(下文有介绍)和国外github上分别进行了部署，在国内用户访问blog.renyuzhuo.cn时直接转发到coding服务器，国外访问blog.renyuzhuo.cn转发到github服务器，在直接使用renyuzhuo.cn时转发到coding上，这么配置应该可以达到这样的目的，但是测试国内访问大多数依旧转发给了github，原因不明。</p>
+<p>再说一下A记录，github并不是将所有博客地址都分配了一个IP地址，那太浪费了，而是通过访问同一个IP后由github根据访问的域名不同转发给到不同博客。CNAME是将一个域名指向另外一个域名达到访问效果相同的目的。</p>
+</blockquote>
+<p>这样配置还不够，需要在自己项目中添加CNAME文件，表示通过什么域名可以访问该博客。例如：</p>
 <pre><code>/themes/source/CNAME文件中：blog.renyuzhuo.cn
 </code></pre><p>这样配置后，可以通过<a href="http://blog.renyuzhuo.cn"><code>blog.renyuzhuo.cn</code></a>访问我的博客了。</p>
 <p>没有结束。</p>
