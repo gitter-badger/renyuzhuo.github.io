@@ -21,4 +21,4 @@ layout: about
 
 ### **订阅**
 
-> <a href="http://sendcloud.sohu.com/subInvite/subscriptionInvite.do?invitecode=7e804699-2692-49a2-82a9-a92b7b1e6fbe">邮件订阅</a>
+> <a href="http://sendcloud.sohu.com/subInvite/subscriptionInvite.do?invitecode=7e804699-2692-49a2-82a9-a92b7b1e6fbe">不会发邮件的邮件订阅</a>

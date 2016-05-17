@@ -81,3 +81,5 @@ deploy:
 
 sitemap:
   path: sitemap.xml
+
+cover: /weixin_favicon.png
