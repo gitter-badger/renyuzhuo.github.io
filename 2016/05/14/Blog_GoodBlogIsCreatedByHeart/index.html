@@ -9,20 +9,19 @@
     <meta name="baidu-tc-verification" content="a6fa1a977ef57ac1355fad8e04fea6ac" />
     <meta name="360-site-verification" content="9c1b6f7ebd9df00974d7aabeee7c8771" />
     
-
     <title>GitHub搭建Hexo博客 | RenYuZhuo</title>
     <meta name="author" content="renyuzhuo">
     
-    <meta name="description" content="RenYuZhuo的Blog">
+    <meta name="description" content="使用GitHub搭建Hexo博客，包含自定义域名、流量统计、网站收录，多说插件，评论等">
     
-    
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo, 博客, 静态博客, renyuzhuo, GitHub搭建Hexo博客, github">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta property="og:title" content="GitHub搭建Hexo博客"/>
     <meta property="og:site_name" content="RenYuZhuo"/>
 
     
-    <meta property="og:image" content="undefined"/>
+    <meta property="og:image" content="/weixin_favicon.png"/>
     
 
     <link rel="icon" type="image/png" href="/favicon.png">
@@ -150,16 +149,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/毕业设计/">
-                    毕业设计 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/Test/">
+                    Test <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/Test/">
-                    Test <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/毕业设计/">
+                    毕业设计 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -227,16 +226,16 @@
 
 
             <div class="entry pink-link-context">
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天不想写我的毕业设计了，有点累了，写篇博客，把最近学到的写出来吧，就是这样。</p>
-<p>使用GitHub搭建静态博客，除了酷，更多的应该是对学习过程的一个记录，帮助到更多的人，也是对自己技术的一个提高，使用GitHub是因为他是免费的好用的稳定的，还有个原因是好多人都用，我也是因为别人这么干我也这么干了。当然，如果使用第三方的博客网站，也是个不错的选择，但是我这里只是想提醒一下自己，无论怎样最核心的问题时博客内文章质量的好坏。好了，开始进入正文。</p>
-<h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>首先需要基础环境，直接包含下载传送门，包括<a href="https://git-scm.com/downloads" target="_blank" rel="external">安装Git</a>，<a href="https://nodejs.org/en/download/" target="_blank" rel="external">安装Node.js</a>，接下来可以<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">安装Hexo</a>了，命令分别如下：</p>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>今天不想写我的毕业设计了，有点累了，写篇博客，就是这样。</p>
+<p>使用GitHub搭建静态博客，除了酷，更多的应该是对学习过程的一个记录，帮助到更多的人，也是对自己技术的一个提高，使用GitHub是因为他是免费的好用的稳定的，还有个原因是好多人都用，我呢是因为别人这么干所以我也这么干了。当然，如果使用第三方的博客网站，也是个不错的选择，但是我这里只是想提醒一下自己，无论怎样最核心的问题时博客内文章质量的好坏。好了，开始进入正文，其中例子以本网站为例。</p>
+<h1 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h1><h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>首先需要基础环境，直接包含下载传送门，包括<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git下载传送门</a>，<a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js下载传送门</a>，接下来可以<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">安装Hexo</a>了，命令分别如下：</p>
 <pre><code>git:
-    windows: 直接安装包安装
+    windows: 直接安装包双击安装
     ubuntu: apt-get install git
     其他linux: https://git-scm.com/download/linux
 
 nodejs:
-    windows: 安装包直接安装
+    windows: 安装包直接双击安装
     ubuntu: apt-get install nodejs
     其他linux: http://www.runoob.com/nodejs/nodejs-install-setup.html
 
@@ -255,21 +254,22 @@ $ ls # 查看目录，windows下为dir
     |   ├── _drafts
     |   └── _posts      # 网站博客内容
     └── themes          # 主题，可以使用很多主题，https://hexo.io/themes/
-</code></pre><p>在<code>_config.yml</code>可以更改网站大部分配置，<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">参考</a>，但是我建议先不改，将网站跑起来看看效果，然后再回来改。</p>
+                        # 这些主题如何具体使用，请参考各主题，不能一言以蔽之
+</code></pre><p>在<code>_config.yml</code>可以更改网站大部分配置，点击<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="external">这里</a>参考配置说明，但是我建议先不改，将网站跑起来看看效果，然后再回来改。</p>
 <p>命令，提示直接输入hexo可以看到支持哪些命令：</p>
 <pre><code>$ hexo generate # 生成静态文件，直接输入`hexo g`也可以
 $ hexo server   # 启动服务器，可以在浏览器中查看，默认使用4000端口，直接输入hexo s也可以，
                 # 可以使用`hexo s -p 3000`也可以更改端口为3000
-</code></pre><p>部署，需要在github上创建<code>用户名.github.io</code>的项目，当然，如果不愿意这么叫而改为其他的名称需要一些配置，本文暂时不考虑：</p>
+</code></pre><p>部署，需要在github上创建<code>renyuzhuo.github.io</code>的项目，当然，如果不愿意这么叫而改为其他的名称需要一些配置，本文暂时不考虑：</p>
 <pre><code>$ hexo deploy
-</code></pre><p>部署网站，值得是将网站部署到github上，需要在_config.yml中进行配置，如下，这里支持同时部署到多个代码托管平台上，例如这里包含github和coding：</p>
+</code></pre><p>部署网站，值得是将网站部署到GitHub上，需要在_config.yml中进行配置，如下，这里支持同时部署到多个代码托管平台上，例如这里包含github和coding，当然，你也可以直接进入public目录中直接使用Git上传到GitHub或Coding上，效果是一样的：</p>
 <pre><code>deploy:
 type: git
 repo:
     github: git@github.com:renyuzhuo/renyuzhuo.github.io.git,master
     coding: git@git.coding.net:ryz/ryz.git,master
-</code></pre><p>到这里，已经将网站部署到代码托管平台上了，可以通过浏览器进行访问了<code>http://用户名.github.io</code>。</p>
-<p>但是到这里还没有完成。</p>
+</code></pre><p>到这里，已经将网站部署到代码托管平台上了，可以通过浏览器进行访问了<a href="http://renyuzhuo.github.io" target="_blank" rel="external"><code>http://renyuzhuo.github.io</code></a>。</p>
+<p>完成了吗？还没有，还可以继续学习一些东西。</p>
 <h2 id="使用自己域名"><a href="#使用自己域名" class="headerlink" title="使用自己域名"></a>使用自己域名</h2><p>可以到<a href="https://wanwang.aliyun.com/" target="_blank" rel="external">万网</a>购买自己的域名，通过自己域名访问该博客。进入到自己域名的域名解析管理中，添加记录，这里以我自己的域名(renyuzhuo.cn)为例：</p>
 <table>
 <thead>
@@ -383,7 +383,7 @@ CNZZ：http://wss.cnzz.com/main.php?c=user&amp;a=login
     <footer class="center-align page-footer grey darken-4 darken-1">
     <div class="footer-copyright pink-link-context">
         <div class="container">
-            © 2015 RenYuZhuo
+            © 2016 RenYuZhuo
         </div>
     </div>
     <div class="footer-copyright pink-link-context">
