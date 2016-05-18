@@ -311,6 +311,12 @@ main {
 .blue-grey-link-context a:hover {
   color: #90a4ae !important;
 }
+.hide-link-context a {
+  color: #212121 !important;
+}
+.hide-link-context a:hover {
+  color: #90a4ae !important;
+}
 .nav-wrapper {
   padding: 0 25px;
 }
