@@ -311,12 +311,6 @@ main {
 .blue-grey-link-context a:hover {
   color: #90a4ae !important;
 }
-.hide-link-context a {
-  color: #212121 !important;
-}
-.hide-link-context a:hover {
-  color: #90a4ae !important;
-}
 .nav-wrapper {
   padding: 0 25px;
 }
@@ -1005,4 +999,10 @@ figure.highlight .gutter {
 .about-page.row .row {
   margin-left: 0;
   margin-right: 0;
+}
+.rhide-link-context a {
+  color: #212121 !important;
+}
+.rhide-link-context a:hover {
+  color: #90a4ae !important;
 }
