@@ -61,12 +61,11 @@ Permissions 0777 for '/Users/username/.ssh/id_rsa' are too open.
 It is recommended that your private key files are NOT accessible by others.
 This private key will be ignored.
 ```
-#### 解决办法，[右键保存]()
+#### 解决办法，右键[保存](/others/shell/createssh.sh)脚本
 ```
 chmod og-wx ~/.ssh/authorized_keys
 chmod 400 ~/.ssh/id_rsa
 ```
-
 # 结束语
 
 好好研究吧，问题还多着呢。
