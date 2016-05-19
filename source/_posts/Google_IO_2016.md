@@ -2,13 +2,13 @@
 
 layout: post
 
-date: 2016-05-18 01:01:01
+date: 2016-05-19 01:01:01
 
 title: Google IO 2016
 
-description: Google IO 2016，发布了哪些东西？
+description: Google IO 2016，发布的东西包括：Google Assistant, Google Home, Allo, Duo, Android N, Google Daydream, Instant Apps
 
-keywords: Google IO
+keywords: Google IO, Google Assistant, Google Home, Allo, Duo, Android N, Google Daydream, Instant Apps
 
 categories:
 - Google
